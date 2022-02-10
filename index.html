@@ -4,11 +4,28 @@
 <meta charset="UTF-8">
 <title>情報学特講後期課題</title>
 <link rel="stylesheet" href="mystyle.css">
-<script src="bonus.js"></script>
+<script src="timer.js"></script>
 </head>
 <body>
-<div id="btn">    
-<input type="button" value="抽選"　onclick="btn();">
+<h1>ボタンを押すといいことあるかも！？</h1>
+<input id="omikuji_btn" type="button" value="おみくじを引く">
+<script>
+    document.getElementById( "omikuji_btn" ).onclick = function() {
+        var rnd = Math.floor( Math.random() * 6 );
+        var omikuji;
+        if (rnd === 0) omikuji = "当たり";
+        if (rnd === 1) omikuji = "はずれ";
+        if (rnd === 2) omikuji = "はずれ";
+        if (rnd === 3) omikuji = "はずれ";
+        if (rnd === 4) omikuji = "はずれ";
+        if (rnd === 5) omikuji = "はずれ";
+        alert(omikuji);
+    }
+</script>
+<br>
+<h1>当たりが出たら押してね（三秒後に何かが表示されるよ）</h1>
+<form> <input type="button" value="Timer" onclick="setTimeout('mes()',3000)"> </form>
+<br>
 </div>
 </body>
 </html>
