@@ -1,1 +1,1 @@
-function mes(){alert("よく頑張った!");}
+function mes(){alert("リンクに飛んでね　https://takeuma15.github.io/takeuma/");}
